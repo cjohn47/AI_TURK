@@ -1,0 +1,88 @@
+/*
+ *  Mr Pass.  Brain the size of a planet!
+ *
+ *  Proundly Created by Richard Buckland
+ *  Share Freely Creative Commons SA-BY-NC 3.0.
+ *
+ */
+ //Modified by John Cawood on 13/05/16
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <string.h>
+
+#include "Game.h"
+#include "mechanicalTurk.h"
+
+/*
+typedef struct _action {
+   int actionCode;  // see #defines above
+   path destination; // if the action operates on a vertex or ARC this
+   
+   action decideAction (Game g) {
+   //check where campuses
+   int turn = getWhoseTurn(g);
+
+   path aiPath = {0};
+
+   if (turn == UNI_B) {
+   strcpy(aiPath, "RRLRLR");
+   char prev = 'R';
+   char next = 0
+   while (getARC(g, aiPath) != NO_ONE){
+        if (prev == 'R'){
+            next = 'L';
+            prev = 'L';
+        } else {
+            next = 'R';
+            prev = 'R';
+        }
+        strcat(aiPath, next);
+   }
+   } else if (turn == UNI_C) {
+    strcpy(aiPath, "LRLRLRB");
+   char prev = 'B';
+   char next = 0
+   while (getARC(g, aiPath) != NO_ONE){
+        if (prev == 'R'){
+            next = 'L';
+            prev = 'L';
+        } else if (prev = 'L') {
+            next = 'R';
+            prev = 'R';
+        } else {
+            next = 'L';
+            prev = 'L';
+        }
+        strcat(aiPath, next);
+   }
+
+   action nextAction;
+   int actionChosen = FALSE;
+
+  if(turn != NO_ONE ) {
+   //Build Arc
+
+   nextAction.actionCode = OBTAIN_ARC;
+   strncpy(nextAction.destination, aiPath, PATH_LIMIT);
+
+   if (isLegalAction(g, action) == TRUE) {
+      actionChosen = TRUE;
+   }
+   //Spinoff
+      actionTest.actionCode = START_SPINOFF;
+
+   if (!actionChosen && isLegalAction(g, nextAction) == TRUE) {
+      actionChosen = TRUE;
+   }
+   //Pass
+   if (!actionChosen) {
+      nextAction.actionCode = PASS;
+   }
+  }
+     return nextAction;
+}
+
+
+
