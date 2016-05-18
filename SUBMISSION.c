@@ -122,7 +122,7 @@ action decideAction (Game g) {
       char *next = "LR";
    
       int i = 0;
-      while (i <=30 && getCampus(g, aiPathCampus) != NO_ONE){
+      while (i <= 30 && getCampus(g, aiPathCampus) != NO_ONE){
       
          strcat(aiPathCampus, next);
          i++;
