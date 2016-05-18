@@ -100,7 +100,7 @@ action decideAction (Game g) {
     }
 
 
-   path aiPathCampus;
+   path aiPathCampus = {0};
 
    //next part is simialer to arc pathing above
    //but since 2 campuses can't be made adjacent it 
